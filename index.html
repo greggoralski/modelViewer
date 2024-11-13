@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModelViewer Week 11</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="hero">
+        <h1>Industrial Design Chairs</h1>
+        <p>Check out some of the chairs designed by Humber College Industrial Design students</p>
+    </div>
+    <div class="gallery">
+        <div class="chair">
+            <h2>Avona Chair</h2>
+            <model-viewer id="avona" src="./models/Avona.glb"
+                alt="Avona Chair designed by Humber Industrial Design students"
+                ar
+                exposure="2.2"
+                poster="./modesl/avona-poster.png"
+                min-camera-orbit="0deg 60deg auto" 
+                max-camera-orbit="360deg 110deg auto">
+                <button id="first-button" class="Hotspot" slot="hotspot-1" data-position="-0.591557984816971m 0.964079384949851m -0.04686007836538164m" data-normal="0.4598576833807463m 0.8823237801878945m -0.10017813109974388m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">First one</div>
+                </button>
+                <button  id="second-button" class="Hotspot" slot="hotspot-2" data-position="-0.2432409243408899m 0.4892755354840861m 0.6160169045104535m" data-normal="-0.18151055054702722m 0.9585007831010189m 0.21984123551974613m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation">Second One</div>
+                </button>
+            </model-viewer>
+        </div>
+        <div id="chair-content" class="chair-content">
+            <h3>Chair content</h3>
+        </div>
+        <div class="chair">
+            <h2>Picard Chair</h2>
+            <model-viewer src="./models/glass.glb"
+                alt="Picard Chair designed by Humber Industrial Design students"
+                ar
+                auto-rotate
+                camera-controls></model-viewer>
+        </div>
+    </div>
+    
+</body>
+<script src="./js/script.js"></script>
+</html>
